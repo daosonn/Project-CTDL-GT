@@ -30,10 +30,10 @@ The input is provided as follows:
 ```
 6 8 1
 1 2 7
-1 3 4
+1 3 12
 2 3 2
 2 4 9
-3 5 3
+3 5 10
 4 6 1
 5 4 4
 5 6 5
@@ -47,9 +47,9 @@ The output consists of the shortest distance from the source vertex `s` to all o
 
 ```
 Khoang cach tu dinh 1 den dinh 1 la: 0. Duong di: 1
-Khoang cach tu dinh 1 den dinh 2 la: 6. Duong di: 1 -> 3 -> 2
-Khoang cach tu dinh 1 den dinh 3 la: 4. Duong di: 1 -> 3
-Khoang cach tu dinh 1 den dinh 4 la: 11. Duong di: 1 -> 3 -> 5 -> 4
-Khoang cach tu dinh 1 den dinh 5 la: 7. Duong di: 1 -> 3 -> 5
-Khoang cach tu dinh 1 den dinh 6 la: 12. Duong di: 1 -> 3 -> 5 -> 6
+Khoang cach tu dinh 1 den dinh 2 la: 7. Duong di: 1 -> 2
+Khoang cach tu dinh 1 den dinh 3 la: 9. Duong di: 1 -> 2 -> 3
+Khoang cach tu dinh 1 den dinh 4 la: 16. Duong di: 1 -> 2 -> 4
+Khoang cach tu dinh 1 den dinh 5 la: 19. Duong di: 1 -> 2 -> 3 -> 5
+Khoang cach tu dinh 1 den dinh 6 la: 17. Duong di: 1 -> 2 -> 4 -> 6
 ```
