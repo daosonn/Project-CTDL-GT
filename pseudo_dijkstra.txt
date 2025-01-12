@@ -1,0 +1,42 @@
+Procedure Dijkstra(Graph, Đỉnh_bắt_đầu):
+    Đầu vào: 
+        - Graph: Đồ thị với các đỉnh và cạnh có trọng số (G = (V, E))
+        - Đỉnh_bắt_đầu: Đỉnh bắt đầu (S)
+
+    Đầu ra: 
+        - In ra khoảng cách ngắn nhất từ đỉnh Đỉnh_bắt_đầu đến tất cả các đỉnh khác và đường đi của chúng
+
+    Bước 1: Khởi tạo
+        - Tạo hàng đợi ưu tiên (priority queue) Q
+        - Tạo mảng khoảng cách D lưu khoảng cách từ Đỉnh_bắt_đầu đến mỗi đỉnh:
+            + D[S] = 0 (khoảng cách từ Đỉnh_bắt_đầu đến chính nó là 0)
+            + D[v] = Infinity (khoảng cách ban đầu đến các đỉnh khác là vô cực)
+        - Tạo tập đỉnh đã thăm V_visited = {}
+
+    Bước 2: Thêm đỉnh Đỉnh_bắt_đầu vào hàng đợi:
+        - Đưa (D[S], S) vào Q (khoảng cách 0 và đỉnh S)
+
+    Bước 3: Lặp qua các đỉnh
+        While Q is not empty:
+            - (Khoảng_Cách_Hiện_Tại, Đỉnh_Hiện_Tại) = Lấy đỉnh có khoảng cách nhỏ nhất từ Q
+            - Nếu Đỉnh_Hiện_Tại đã nằm trong V_visited:
+                Bỏ qua và tiếp tục lặp
+            - Đánh dấu Đỉnh_Hiện_Tại là đã thăm:
+                Thêm Đỉnh_Hiện_Tại vào V_visited
+
+            Bước 4: Cập nhật khoảng cách
+                Với mỗi đỉnh kề của Đỉnh_Hiện_Tại trong Graph:
+                    - Đặt Đỉnh_Kề là đỉnh liền kề
+                    - Đặt Trọng_Số_Cạnh là trọng số của cạnh nối (Đỉnh_Hiện_Tại, Đỉnh_Kề)
+                    - Tính Khoảng_Cách_Mới = Khoảng_Cách_Hiện_Tại + Trọng_Số_Cạnh
+                    - Nếu Khoảng_Cách_Mới < D[Đỉnh_Kề]:
+                        + Cập nhật D[Đỉnh_Kề] = Khoảng_Cách_Mới
+                        + Đưa (D[Đỉnh_Kề], Đỉnh_Kề) vào Q
+
+        End While
+
+    Bước 5: Return D
+        - D chứa khoảng cách ngắn nhất từ Đỉnh_bắt_đầu đến mọi đỉnh
+
+End Procedure
+
