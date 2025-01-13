@@ -59,7 +59,7 @@ Ví dụ, đồ thị bắt đầu từ đỉnh 1
 Ta cập nhật `d[2]` và `d[3]`, đỉnh 1 không nối với đỉnh 4, 5, 6 nên các đỉnh này vẫn có giá trị là `Inf`.
 
 - **Bước 4**: Current `u = 2`, đỉnh 2 kề với đỉnh 3 và 4, ta cập nhật:
- ```
+  ```
   d[v] = min(d[v], d[u] + len((u,v)))
   ```
 - Trọng số từ đỉnh 2 đến 3 là 2:
@@ -72,7 +72,7 @@ Ta cập nhật `d[2]` và `d[3]`, đỉnh 1 không nối với đỉnh 4, 5, 6 
   ```
 Ta cập nhật `d[3]` và `d[4]`, đỉnh 1 không nối với đỉnh 5, 6 nên các đỉnh này vẫn có giá trị là `Inf`.
 
-- ……  
+……  
 Ta lặp lại tương tự các bước cho đến khi `unmarked` rỗng, ta sẽ thu được khoảng cách ngắn nhất từ đỉnh 1 đến các đỉnh khác.
 
 ---
