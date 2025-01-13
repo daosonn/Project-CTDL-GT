@@ -1,6 +1,7 @@
 # Algorithm Verification
 
 ## Đồ thị
+![Đồ thị minh họa](graph.jpg)
 Ta có đồ thị như hình trên.
 
 ### Danh sách cạnh:
